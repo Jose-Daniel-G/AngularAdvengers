@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "Figura de Acción Iron Man", "precio": 19.99 , "imagen": "iron_man_toy.jpg"},
+  { "id": 2, "nombre": "Figura de Acción Spider-Man", "precio": 17.50 , "imagen": "spiderman_toy.jpg"},
+  { "id": 3, "nombre": "Figura de Acción Capitán América", "precio": 18.99 , "imagen": "capitan_america_toy.jpg"},
+  { "id": 4, "nombre": "Set de Construcción LEGO de Thanos", "precio": 29.90 , "imagen": "thanos_lego.jpg"},
+  { "id": 5, "nombre": "Máscara de Iron Spider con Luces", "precio": 34.80 , "imagen": "iron_spider_mask.jpg"},
+  { "id": 6, "nombre": "Escudo del Capitán América de Juguete", "precio": 12.00 , "imagen": "capitan_america_shield.jpg"},
+  { "id": 7, "nombre": "Martillo de Thor Electrónico", "precio": 21.99 , "imagen": "thor_hammer.jpeg"},
+  { "id": 8, "nombre": "Set de Figuras de los Vengadores", "precio": 34.00 , "imagen": "avengers_figure_set.jpg"}
+]
