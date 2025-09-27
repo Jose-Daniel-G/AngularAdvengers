@@ -7,7 +7,6 @@ import { HeaderComponent } from './shared/header/header.component';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'carrito-compras';

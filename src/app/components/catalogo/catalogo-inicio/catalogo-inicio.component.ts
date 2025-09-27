@@ -16,14 +16,14 @@ export class CatalogoInicioComponent implements OnInit {
   productos: Producto[] = [];
 
   ngOnInit(): void {
-    this.getProductos();         
+    this.getProductos();
   }
 
   getProductos(){
     this.productoService.getProductos().subscribe({
       next: (data) => {
         this.productos = data;
-        console.log(this.productos);
+        console.log(data);
       },
       error: (e) => {
         console.log(e);
