@@ -1,9 +1,7 @@
-`URL: `https://jose-daniel-g.github.io/AngularAdvengers/v2/
-
 [![See Demo own project](https://img.shields.io/badge/-Ver%20Demo-informational?style=flat&logo=github&link=https://jose-daniel-g.github.io/AngularAdvengers/)](https://jose-daniel-g.github.io/AngularAdvengers/)
 
-[🚀 See demo de Advengers](https://jose-daniel-g.github.io/AngularAdvengers/)
-[🔥  See Project tutorial](https://jose-daniel-g.github.io/frontend-store/inicio)
+- [🚀 See demo de Advengers](https://jose-daniel-g.github.io/AngularAdvengers/)
+- [🔥  See Project tutorial](https://jose-daniel-g.github.io/frontend-store/inicio)
 ---
 
 ## Screenshots
