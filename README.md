@@ -5,14 +5,14 @@
 ---
 
 ## Screenshots
-|                 FIRST VERSION                     |              SECOND VERSION                          |
-|---------------------------------------------------|------------------------------------------------------|
-|![Vista principal del proyecto](images/template.png)|![Vista principal del proyecto](images/template_1.png)|
-|![Tabla de productos](images/template1.png)        |![Tabla de productos](images/template_2.png)          |
+| FIRST VERSION                                        | SECOND VERSION                                         |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| ![Vista principal del proyecto](images/template.png) | ![Vista principal del proyecto](images/template_1.png) |
+| ![Tabla de productos](images/template1.png)          | ![Tabla de productos](images/template_2.png)           |
 
-|    NICE VESION TUTORIAL     |
-|-----------------------------|
-|![alt text](images/image.png)|
+| NICE VESION TUTORIAL          |
+| ----------------------------- |
+| ![alt text](images/image.png) |
 
 
 ## Cómo Empezar
@@ -20,18 +20,18 @@
 -
 ## 📋 Product Management Components
 
-| Component | Functionality | Description |
-|-----------|---------------|-------------|
-| **ProductFormComponent** | `CREATE`, `EDIT` | Formulario para crear y editar productos |
-| **ProductListComponent** | `INDEX` 'list' | Lista y visualización de productos |
-| **ProductDetailComponent** | `SHOW` 'Detail' | Muestra los detalles de un producto |
+| Component                  | Functionality    | Description                              |
+| -------------------------- | ---------------- | ---------------------------------------- |
+| **ProductFormComponent**   | `CREATE`, `EDIT` | Formulario para crear y editar productos |
+| **ProductListComponent**   | `INDEX` 'list'   | Lista y visualización de productos       |
+| **ProductDetailComponent** | `SHOW` 'Detail'  | Muestra los detalles de un producto      |
 
-| Comandos de Generación                |   Tipo    |
-|---------------------------------------|-----------|
-| ng g s services/userdata              | Service   |
-| ng g c components/user --skip-tests   | Component |
-| ng g m app-routing --flat --module=app| Module    |
-| ng b   --configuration production     | Build     |
+| Comandos de Generación                 | Tipo      |
+| -------------------------------------- | --------- |
+| ng g s services/userdata               | Service   |
+| ng g c components/user --skip-tests    | Component |
+| ng g m app-routing --flat --module=app | Module    |
+| ng b   --configuration production      | Build     |
 
 #### Frontend-Store ADD Adminlte
 ```
@@ -60,19 +60,25 @@ npm install --save-dev @types/jquery
    ng build --configuration production --base-href "/AngularAdvengers/v2/"
    ng deploy --base-href="/AngularAdvengers/v2/" --dir=v2
    ```
-   ---
-  "styles": [
-    "node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-    "node_modules/admin-lte/dist/css/adminlte.min.css",
-    "src/styles.css"
-  ],
-  "scripts": [
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-    "node_modules/admin-lte/dist/js/adminlte.min.js"
-  ]
-  ---
+    ```json
+    "styles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+      "node_modules/admin-lte/dist/css/adminlte.min.css",
+      "src/styles.css"
+    ]
+    ```
+
+    ## 📜 Scripts Configuration  
+
+    ```json
+    "scripts": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "node_modules/admin-lte/dist/js/adminlte.min.js"
+    ]
+    ```
+
    #### CONFIG ANGULAR.JSON
    - De lo contrario si ya esta en angular.json configurado
    ```bash
