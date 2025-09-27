@@ -1,23 +1,25 @@
-<div class="container mt-2">
-    <h3 class="text-center">Catalogo</h3>
-    <hr>
-    <div class="row">
+<div class="container mx-auto mt-4">
+    <h3 class="text-center text-2xl font-semibold">Catálogo</h3>
+    <hr class="my-4 border-gray-300">
+    <div class="flex flex-wrap -mx-2">
         @for(item of productos; track item.id){
-            <div class="col-sm-3 mt-1">
-                <div class="card">
-                        <img [src]="'img/'+item.imagen" alt="">
-                    <div class="card-body">
-                        <p class="fw-bold">{{ item.nombre }}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button (click)="agregarProducto(item)" type="button" class="btn btn-sm btn-dark">
-                                <i class="fa fa-shopping-cart"></i>
-                                Agregar</button>
-                                <small class="fw-bold">S/{{ item.precio }}</small>
-                        </div> 
+        <!-- Iteración para los productos -->
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img [src]="'img/' + item.imagen" alt="{{ item.nombre }}" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <p class="font-semibold text-lg">{{ item.nombre }}</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <button (click)="agregarProducto(item)" type="button"
+                            class="bg-gray-800 text-white text-sm py-1 px-2 rounded flex items-center">
+                            <i class="fa fa-shopping-cart mr-1"></i>
+                            Agregar
+                        </button>
+                        <small class="text-gray-700 font-semibold">S/{{ item.precio }}</small>
                     </div>
                 </div>
             </div>
+        </div>
         }
-        
     </div>
 </div>

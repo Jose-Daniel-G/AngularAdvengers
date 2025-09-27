@@ -1,0 +1,18 @@
+<div class="mb-4 grid grid-cols-1 gap-6 xl:grid-cols-12">
+    <!-- Contenedor principal que ocupa 12 columnas en pantallas grandes -->
+    <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden xl:col-span-12">
+
+      <!-- Contenido principal -->
+      <div class="p-6">
+        <p *ngIf="!userLoginOn">Usuario NO autenticado</p>
+        <p *ngIf="userLoginOn">Usuario Autenticado</p>
+        <div *ngIf="userLoginOn">
+        <p>Nombre:{{ userData?.name}}</p>
+        <p>Apellido:{{ userData?.lastName}}</p>
+        <p>Email:{{ userData?.email}}</p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  

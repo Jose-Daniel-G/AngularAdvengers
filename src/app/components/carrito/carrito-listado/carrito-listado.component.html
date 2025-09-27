@@ -1,80 +1,64 @@
-<div class="container-fluid mt-3">
-  <h5>Mi carrito</h5>
-  <hr />
-  <div class="row">
-    <div class="col-sm-9">
-      <div class="card">
-        <div class="card-body">
-          <div class="table-responsive">
-            <table
-              class="table table-striped table-bordered table-hover table-sm text-center"
-            >
+<div class="container mx-auto mt-6">
+  <h5 class="text-lg font-semibold">Mi carrito</h5>
+  <hr class="my-4 border-gray-300">
+  <div class="flex flex-wrap">
+    <!-- Sección de la tabla de productos -->
+    <div class="w-full lg:w-3/4 px-2">
+      <div class="bg-white shadow-md rounded-lg">
+        <div class="p-4">
+          <div class="overflow-auto">
+            <table class="min-w-full bg-white border border-gray-200 text-center text-sm">
               <thead>
-                <tr>
-                  <th>Producto</th>
-                  <th>Imagen</th>
-                  <th>Precio(S/)</th>
-                  <th>Cantidad</th>
-                  <th>Importe</th>
-                  <th>Accion</th>
+                <tr class="bg-gray-100">
+                  <th class="py-2 px-4 border-b">Producto</th>
+                  <th class="py-2 px-4 border-b">Imagen</th>
+                  <th class="py-2 px-4 border-b">Precio(S/)</th>
+                  <th class="py-2 px-4 border-b">Cantidad</th>
+                  <th class="py-2 px-4 border-b">Importe</th>
+                  <th class="py-2 px-4 border-b">Acción</th>
                 </tr>
               </thead>
               <tbody>
-                @for(item of listCarrito; track item.producto){
-                <tr>
-                  <td>{{ item.producto.nombre }}</td>
-                  <td><img src="/img/{{ item.producto.imagen }}" width="50" height="60" alt="{{ item.producto.nombre }}"/></td>
-
-                  <td>{{ item.producto.precio | number : "1.2-2" }}</td>
-                  <td>
-                    <!-- <input type="number" [(ngModel)]="item.cantidad"  min="1"/> -->
-                    <input type="number" [(ngModel)]="item.cantidad" (change)="actualizar(item,$index)" (keydown)="onKeyDown($event)" min="1"/></td>
-                  <td>{{item.producto.precio * item.cantidad | number : "1.2-2"}}</td>
-                  <td>
-                    <button
-                      (click)="eliminarItem($index)"
-                      class="btn btn-danger btn-sm"
-                      type="button"
-                    >
-                      <div class="fa fa-trash"></div>
+                <tr *ngFor="let item of listCarrito; let i = index">
+                  <td class="py-2 px-4 border-b">{{ item.producto.nombre }}</td>
+                  <td class="py-2 px-4 border-b">
+                    <img src="/img/{{ item.producto.imagen }}" alt="{{ item.producto.nombre }}" class="w-12 h-16 object-cover">
+                  </td>
+                  <td class="py-2 px-4 border-b">{{ item.producto.precio | number : '1.2-2' }}</td>
+                  <td class="py-2 px-4 border-b">
+                    <input type="number" [(ngModel)]="item.cantidad" (change)="actualizar(item, i)" (keydown)="onKeyDown($event)" min="1" class="border rounded w-16 text-center">
+                  </td>
+                  <td class="py-2 px-4 border-b">{{ item.producto.precio * item.cantidad | number : '1.2-2' }}</td>
+                  <td class="py-2 px-4 border-b">
+                    <button (click)="eliminarItem(i)" class="bg-red-500 text-white text-xs rounded px-2 py-1 hover:bg-red-600">
+                      <i class="fa fa-trash"></i>
                     </button>
                   </td>
-                </tr>} 
-                @if(listCarrito.length == 0){
-                <tr>
-                  <td colspan="6" class="text-center">
-                    No hay productos en el carrito
-                  </td>
                 </tr>
-                }
+                
+                <tr *ngIf="listCarrito.length === 0">
+                  <td colspan="6" class="py-4 text-center text-gray-500">No hay productos en el carrito</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <h5>RESUMEN DE COMPRA</h5>
-            <hr />
-            <div class="d-flex justify-content-betwen mv-4">
-              <p class="mb-2">Total</p>
-              <p class="mb-2">
-                S/{{ carritoService.total() | number : "1.2-2" }}
-              </p>
-            </div>
-            <button
-              [disabled]="listCarrito.length == 0"
-              class="btn btn-dark"
-              type="submit"
-            >
-              <div class="d-flex justify-content-betwen">
-                <span>PROCESAR</span>
-              </div>
-            </button>
+    
+    <!-- Sección del resumen de compra -->
+    <div class="w-full lg:w-1/4 px-2 mt-4 lg:mt-0">
+      <div class="bg-white shadow-md rounded-lg">
+        <div class="p-4">
+          <h5 class="text-lg font-semibold mb-4">Resumen de Compra</h5>
+          <hr class="mb-4 border-gray-300">
+          <div class="flex justify-between mb-4">
+            <p class="text-gray-700">Total</p>
+            <p class="font-semibold">S/{{ carritoService.total() | number : '1.2-2' }}</p>
           </div>
+          <button [disabled]="listCarrito.length === 0" class="w-full bg-gray-800 text-white py-2 rounded hover:bg-gray-900 transition duration-200">
+            PROCESAR
+          </button>
         </div>
       </div>
     </div>
