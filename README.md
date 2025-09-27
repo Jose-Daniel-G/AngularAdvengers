@@ -1,34 +1,25 @@
 `URL: `https://jose-daniel-g.github.io/AngularAdvengers/v2/
 
+[![See Demo own project](https://img.shields.io/badge/-Ver%20Demo-informational?style=flat&logo=github&link=https://jose-daniel-g.github.io/AngularAdvengers/)](https://jose-daniel-g.github.io/AngularAdvengers/)
 
-# CarritoCompras
+[🚀 See demo de Advengers](https://jose-daniel-g.github.io/AngularAdvengers/)
+[🔥  See Project tutorial](https://jose-daniel-g.github.io/frontend-store/inicio)
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Screenshots
+|                 FIRST VERSION                     |              SECOND VERSION                          |
+|---------------------------------------------------|------------------------------------------------------|
+![Vista principal del proyecto](images/template.png)|![Vista principal del proyecto](images/template_1.png)|
+|![Tabla de productos](images/template1.png)        |![Tabla de productos](images/template_2.png)          |
 
-## Development server
+|    NICE VESION TUTORIAL     |
+|-----------------------------|
+|![alt text](images/image.png)|
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
+## Cómo Empezar
+- versión 18.2.11.  
+-
 ## 📋 Product Management Components
 
 | Component | Functionality | Description |
@@ -37,8 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 | **ProductListComponent** | `INDEX` 'list' | Lista y visualización de productos |
 | **ProductDetailComponent** | `SHOW` 'Detail' | Muestra los detalles de un producto |
 
- ng g c components/employees
- ng g s service/data 
 | Comandos de Generación                |   Tipo    |
 |---------------------------------------|-----------|
 | ng g s services/userdata              | Service   |
@@ -116,4 +105,44 @@ npx tsc -v
 npm install @ngx-translate/core@latest @ngx-translate/http-loader@latest
 ng add @angular/localize
 
-```
+``` 
+---
+###### Deploy Angular en GitHub Pages
+
+1. **Revisar el `angular.json`**  
+   - Ir a:  
+     ```json
+     "projects": { "frontend-store": {
+     ```
+   - Ese es el **nombre de tu proyecto**.  
+   - En la sección `build > options`, agrega (debajo de `outputPath`):  
+     ```json
+     "baseHref": "/frontend-store/"
+     ```
+---
+
+2. **Instalar la herramienta de despliegue (si no está instalada)**  
+   ```bash
+   npm install -g @angular/cli
+   ng add angular-cli-ghpages
+   ng build --configuration production --base-href "/frontend-store/"
+   ng deploy --base-href=https://jose-daniel-g.github.io/Angular_adminlte/
+   ```
+   - De lo contrario si ya esta en angular.json configurado
+   ```bash
+   ng build --configuration production 
+   ng deploy
+
+   ```
+   *Configurar GitHub Pages en GitHub*
+
+   **Ir a tu repo en GitHub → Settings > Pages.**
+
+   - Seleccionar:
+
+   - Branch: gh-pages
+
+   - Folder: / (root)
+
+   - Guardar.
+
