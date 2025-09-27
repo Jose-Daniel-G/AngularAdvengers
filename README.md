@@ -15,7 +15,7 @@ Este es un proyecto de carrito de compras desarrollado con Angular. Se centra en
 ## Screenshots
 |                 FIRST VERSION                     |              SECOND VERSION                          |
 |---------------------------------------------------|------------------------------------------------------|
-![Vista principal del proyecto](images/template.png)|![Vista principal del proyecto](images/template_1.png)|
+|![Vista principal del proyecto](images/template.png)|![Vista principal del proyecto](images/template_1.png)|
 |![Tabla de productos](images/template1.png)        |![Tabla de productos](images/template_2.png)          |
 
 |    NICE VESION TUTORIAL     |
